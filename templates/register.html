@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Event Registration</title>
+
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Event Registration</h1>
+
+        <h2>Student Details</h2>
+
+        <form action="/register" method="POST">
+
+            <label>Student Name</label>
+            <input
+                type="text"
+                name="name"
+                placeholder="Enter student name"
+                required
+            >
+
+            <label>Age</label>
+            <input
+                type="number"
+                name="age"
+                placeholder="Enter age"
+                required
+            >
+
+            <label>Mobile Number</label>
+            <input
+                type="tel"
+                name="mobile"
+                placeholder="Enter mobile number"
+                required
+            >
+
+            <label>Email</label>
+            <input
+                type="email"
+                name="email"
+                placeholder="Enter email"
+                required
+            >
+
+            <label>College</label>
+            <input
+                type="text"
+                name="college"
+                placeholder="Enter college name"
+                required
+            >
+
+            <label>Course</label>
+
+            <select name="course" required>
+
+                <option value="">Select Course</option>
+
+                <option value="BSc Computer Science">
+                    BSc Computer Science
+                </option>
+
+                <option value="BCA">
+                    BCA
+                </option>
+
+                <option value="BSc IT">
+                    BSc IT
+                </option>
+
+                <option value="BE / BTech">
+                    BE / BTech
+                </option>
+
+                <option value="Other">
+                    Other
+                </option>
+
+            </select>
+
+            <label>Event</label>
+
+            <select name="event" required>
+
+                <option value="">Select Event</option>
+
+                <option value="Tech Fest">
+                    Tech Fest
+                </option>
+
+                <option value="Hackathon">
+                    Hackathon
+                </option>
+
+                <option value="Coding Competition">
+                    Coding Competition
+                </option>
+
+                <option value="Quiz Competition">
+                    Quiz Competition
+                </option>
+
+                <option value="Cultural Event">
+                    Cultural Event
+                </option>
+
+            </select>
+
+            <button type="submit">
+                Register
+            </button>
+
+        </form>
+
+        <div class="bottom-links">
+
+            <a href="/">
+                ← Back to Login
+            </a>
+
+            <a href="/list">
+                View Registration List →
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

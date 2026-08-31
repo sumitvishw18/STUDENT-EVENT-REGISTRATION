@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registration List</title>
+
+    <link rel="stylesheet" href="/static/styles.css">
+
+</head>
+
+<body>
+
+    <div class="list-container">
+
+        <h1>Registered Students</h1>
+
+        {% if students %}
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Sr. No.</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Mobile</th>
+                        <th>Email</th>
+                        <th>College</th>
+                        <th>Course</th>
+                        <th>Event</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    {% for student in students %}
+
+                    <tr>
+
+                        <td>{{ loop.index }}</td>
+                        <td>{{ student.name }}</td>
+                        <td>{{ student.age }}</td>
+                        <td>{{ student.mobile }}</td>
+                        <td>{{ student.email }}</td>
+                        <td>{{ student.college }}</td>
+                        <td>{{ student.course }}</td>
+                        <td>{{ student.event }}</td>
+
+                    </tr>
+
+                    {% endfor %}
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        {% else %}
+
+        <div class="empty">
+
+            <h2>No Registrations Yet</h2>
+
+            <p>No student has registered for an event.</p>
+
+        </div>
+
+        {% endif %}
+
+        <div class="bottom-links">
+
+            <a href="/register">
+                + New Registration
+            </a>
+
+            <a href="/">
+                ← Back to Login
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
